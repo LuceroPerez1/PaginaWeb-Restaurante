@@ -1,0 +1,317 @@
+/*Header compartido*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#logo_todo{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.fondoBarra {
+    width: 100%;
+    height: 10px;
+    background-repeat: no-repeat;
+}
+
+.logoChitos{
+    width: 138px;
+    height: 100px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.header__locationbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f5f2;
+    padding: 12px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+    z-index: 9999;
+    box-shadow: 0 1px 2px 0 rgba(156,156,156,.5);
+}
+
+.navegacion{
+    width: 31%;
+}
+
+nav a{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:rgb(105, 99, 99);
+    font-family: "Montserrat",sans-serif;
+}
+
+li:hover{
+    background-color: whitesmoke;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 19px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+li{
+    display: flex;
+    text-align: center;
+    height: 100px;
+    padding: 25px;
+}
+
+.header__locationbar a {
+    font-family: "Montserrat",sans-serif;
+    color: #5d9732;
+    letter-spacing:0.05rem;
+}
+
+.containerSection{
+    background-image: url(https://img.freepik.com/fotos-premium/vacie-sobremesa-madera-fondo-interior-borroso-cafeteria_7188-598.jpg);
+    font-family: "Montserrat",sans-serif;
+    background-position: center;
+    background-size: 100% 100%; /* Reduce el tamaño de la imagen al 50% */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid #ccc;
+}
+
+.containerSection .containerHead h2{
+    text-align: center;
+    color: #ff0000;
+    font-size: 300%;
+}
+
+.containerItems {
+    text-align: center; /* Centra todo el contenido horizontalmente */
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #000000;
+    border: 1px solid #b30000;
+    display: inline-block;
+    text-align: left;
+    margin: 10px;
+    width: 300px;
+}
+
+.containerPicture {
+    border: 1px solid yellow; /* Borde amarillo */
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+.containerPicture img {
+    max-width: 100%;
+    height: auto;
+}
+
+.containerText {
+    text-align: center;
+    margin-top: 1px;
+    padding: 10px;
+}
+
+.containerText h2 {
+    color: #ff0000;
+}
+
+.containerHP {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: red; /* Fondo rojo */
+    border: 1px solid yellow; /* Borde amarillo */
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0); /* Cambia el color de fondo en el hover */
+}
+
+.ofertas-table {
+    background-image: url(/PaginaWeb-Restaurante-master/PaginaWeb-Restaurante-master/IMAGENES_PAGINAWEB/Logo_face.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    border-collapse: collapse;
+    background-color: black;
+    width: 100%;
+}
+
+.ofertas-table td {
+    border: 1px solid yellow;
+    padding: 10px;
+}
+
+.image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.text {
+    font-family: "Montserrat",sans-serif;
+    color: rgb(255, 0, 0);
+    font-weight: 1000px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E5E4E4;
+    height: 300px;
+    width: 100%;
+}
+    
+.fila1{
+width: 50%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+    
+.fila1 a,.fila2 a{
+font-size: 1.2rem;
+line-height: 1.5em;
+color: #4a4a4a;
+letter-spacing: 1.6px;
+font-family: "Montserrat",sans-serif;
+text-decoration: none;
+}
+    
+.fila1 img{
+max-width: 100px;
+    height: auto;
+}
+    
+.fila1 .sub1 {
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*fila2-----------------------*/
+
+.fila2 {
+width: 55%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.fila2 a{
+    color:#9f9d9a;
+    font-size:1rem;
+}
+
+/*-----Botones-------------------*/
+.fila3{
+width: 40%;
+height:120px; 
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: "Montserrat",sans-serif;
+}
+
+.fila3 .facebook-button {
+    background-color: #073ECE;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.fila3 .twitter-button {
+    background-color: #1D79FF; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.fila3 .instagram-button {
+    background-color: #D62976; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+
+.facebook-button:hover {
+    background-color: #0e5a8a; 
+    animation:jump 1s ease 0s normal;
+}
+
+.instagram-button:hover {
+    background-color: #C50BA6; 
+    animation:jump 1s ease 0s normal;
+}
+
+.logoChitos:hover {
+    animation:jump 1s ease 0s normal;
+}
+    
+/*-----------------ANIMACIONES-----------------*/
+
+@keyframes jump{
+    0%{ transform:translateY(0); }
+    20%{ transform:translateY(0); }
+    40%{ transform:translateY(-10px); }
+    50%{ transform:translateY(0); }
+    60%{ transform:translateY(-5px); }
+    80%{ transform:translateY(0); }
+    100%{ transform:translateY(0); }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
