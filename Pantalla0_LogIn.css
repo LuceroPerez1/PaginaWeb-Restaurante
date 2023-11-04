@@ -107,7 +107,7 @@ nav a{
 
 .inputStyle1{
     display: block;
-    width: 97.45%;
+    width:490px;
     margin-bottom: 20px;
     font-family: "Montserrat",sans-serif;
     font-weight: 500;
@@ -160,6 +160,8 @@ nav a{
     text-transform: uppercase;
     cursor: pointer;
 }
+
+
 
 /*Footer*/
 footer {
