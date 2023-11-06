@@ -132,6 +132,23 @@ li{
     line-height: 1.5rem;
 }
 
+.required-indicator {
+    color: red; /* Puedes personalizar el color como desees */
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.example {
+    font-size: 0.1rem; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    color: #515050; /* Puedes ajustar el color según tus preferencias */
+}
+
+/* Aplicar estilo a los elementos con la clase "example" dentro de un <label> */
+label .example {
+    font-size: 0.5rem;
+    color: #777;
+}
+
 .form-label0 {
     display: inline-block;
     width: 100%;
@@ -284,7 +301,7 @@ footer {
     
 .fila1{
 width: 50%;
-display: flex;
+    display: flex;
 justify-content: space-around;
 align-items: center;
 }
@@ -295,7 +312,7 @@ line-height: 1.5em;
 color: #4a4a4a;
 letter-spacing: 1.6px;
 font-family: "Montserrat",sans-serif;
-text-decoration: none;
+    text-decoration: none;
 }
 
 .fila1 img{

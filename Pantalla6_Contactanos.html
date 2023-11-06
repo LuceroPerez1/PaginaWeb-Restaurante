@@ -38,17 +38,18 @@
                     </div>
 
                     <label for="Nombre" class="form-label0">NOMBRE</label>
-                    <input type="text" name="name" id="Nombre" class="form-input0" required>
+                    <input type="text" name="name" id="Nombre" class="form-input0" placeholder="Escribe tu nombre" onkeypress="return SoloLetras(event);" required>
+                    <script src="/Pantalla6_Contactanos.js"></script>
 
                     <div class="columna">
                         <div class="fila">
                             <label for="E-MAIL" class="form-label1">E-MAIL</label>
-                            <input type="email" name="email" class="form-input1" id="E-MAIL" required>
+                            <input type="email" name="email" class="form-input1" id="E-MAIL" placeholder="Escribe tu e-mail" required>
                         </div>
 
                         <div class="fila">
                             <label for="Telefono" class="form-label1">TELÉFONO</label>
-                            <input type="tel" pattern="[0-9]{10}" name="Telefono" id="TELEFONO" class="form-input1" required>
+                            <input type="tel" pattern="[0-9]{10}" name="Telefono" id="TELEFONO" class="form-input1" placeholder="Escribe tu telefono" onkeypress="return SoloNumeros(event);" required>
                         </div>
                     </div>
 
@@ -90,9 +91,9 @@
                     </select>
             
                     <label for="MENSAJE" class="form-label0">MENSAJE</label>
-                    <textarea name="coments" id="MENSAJE" class="form-input0"  cols="30" rows="10"></textarea required>
+                    <textarea name="coments" id="MENSAJE" class="form-input0" placeholder="Escribe un mensaje" cols="30" rows="10"></textarea required>
 
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/VentanaContacto.html">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/PaginaWeb-Restaurante-master/Pantalla2_Inicio.html">
 
                     <input type="hidden" name="_captcha" value="false">
 
