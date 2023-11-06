@@ -10,8 +10,6 @@ const parrafoUsuario = document.getElementById("parrafoCorreo")
 const parrafoContraseña = document.getElementById("parrafoContraseña")
 
 
-
-
 // las funciones siempre llevan parentesis, dentro de estos () se definen los parametros de entrada de la funcion 
 // la funcion puede no tener parametros de entrada depende del caso, pero aun sin parametro de entrada siempre tiene que definirse la funcion con parentesis 
  // porque todo el if raro   porque estamos validando condiciones para la variable nombre y esas condiciones son
