@@ -332,10 +332,10 @@ footer {
 }
     
 .fila1{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+width: 50%;
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
     
 .fila1 a,.fila2 a{
@@ -344,7 +344,7 @@ line-height: 1.5em;
 color: #4a4a4a;
 letter-spacing: 1.6px;
 font-family: "Montserrat",sans-serif;
-    text-decoration: none;
+text-decoration: none;
 }
 
 .fila1 img{
@@ -356,18 +356,18 @@ max-width: 100px;
 .fila1 .sub1 {
     background-color: blue;
     text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+        display: flex;
+justify-content: space-around;
+align-items: center;
 }
 
 /*fila2-----------------------*/
 
 .fila2 {
-    width: 55%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+width: 55%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .fila2 a{
@@ -377,12 +377,12 @@ max-width: 100px;
 
 /*-----Botones-------------------*/
 .fila3{
-    width: 40%;
-    height:120px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Montserrat",sans-serif;
+width: 40%;
+height:120px; 
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: "Montserrat",sans-serif;
 }
 
 .fila3 .facebook-button {

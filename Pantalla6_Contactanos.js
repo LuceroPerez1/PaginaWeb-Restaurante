@@ -2,14 +2,15 @@ console.log("¡Mi archivo JavaScript está funcionando!");
 
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("miFormulario");
-  const mensajeAgradecimiento = document.getElementById("mensajeAgradecimiento");
 
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (validarFormulario()) {
-      mostrarMensajeAgradecimiento() 
+      mostrarMensajeAgradecimiento();
       redirigirANuevaPagina();
+    } else {
+      alert("Los datos son incorrectos. Por favor, revíselos y vuelva a intentarlo.");
     }
   });
 
@@ -19,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const telefonoInput = document.getElementById("TELEFONO");
     const estadoSelect = document.getElementById("select-estado");
     const mensajeTextarea = document.getElementById("MENSAJE");
+    const regexSoloLetras = /^[A-Za-z\s]+$/;
 
-    if (nombreInput.value.trim() === "") {
-      alert("El campo Nombre es obligatorio.");
+    if (nombreInput.value.trim() === "" || !regexSoloLetras.test(nombreInput.value)) {
+      alert("El campo Nombre debe contener solo letras mayúsculas y minúsculas.");
       return false;
     }
 
@@ -31,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (telefonoInput.value.trim() === "" || !esTelefonoValido(telefonoInput.value)) {
-      alert("Ingresa un número de teléfono válido.");
+      alert("Ingresa un número de teléfono válido de 10 dígitos.");
       return false;
     }
 
-    if (estadoSelect.value === "--Selecciona un estado--") {
+    if (estadoSelect.value.trim() === "--Selecciona un estado--") {
       alert("Selecciona un estado.");
       return false;
     }
@@ -67,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "Pantalla1_CreacionUsuario.html";
   }
 });
+
