@@ -19,7 +19,6 @@
 </header>
 
 <body>
-    <script src="/Pantalla1_CreacionUsuario.js"></script>
     <div class="containerInformacion">
         <div class="registroUsuario">
             <h2>Registro de Usuario</h2>
@@ -30,34 +29,36 @@
     <div class="formulario">
         <form action="/Pantalla1_CreacionUsuario.html" method="post">
             <label for="Nombre" class="labelStyle1">Nombre</label><br>
-            <input type="text" id="nombre" class="inputStyle1" placeholder="Escribe tu nombre">
+            <input type="text" id="nombre" class="inputStyle1" placeholder="Escribe tu nombre" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Apellido" class="labelStyle1">Apellido</label><br>
-            <input type="text" id="apellido" class="inputStyle1" placeholder="Escribe tu apellido">
+            <input type="text" id="apellido" class="inputStyle1" placeholder="Escribe tu apellido" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Telefono" class="labelStyle1">Telefono</label><br>
-            <input type="text" id="telefono" class="inputStyle1" placeholder="Escribe tu telefono">
+            <input type="text" paid="telefono" class="inputStyle1" placeholder="Escribe tu teléfono" onkeypress="return SoloNumeros(event);" maxlength="10" required>
             <br>
             <label for="Correo" class="labelStyle1">Correo</label><br>
-            <input type="text" id="correo" class="inputStyle1" placeholder="Escribe tu correo">
+            <input type="email" id="correo" class="inputStyle1" placeholder="Escribe tu correo" oninput="validarCorreo(this.value);" required>
             <br>
             <label for="Calle" class="labelStyle1">Calle</label><br>
-            <input type="text" id="calle" class="inputStyle1" placeholder="Escribe tu calle">
+            <input type="text" id="calle" class="inputStyle1" placeholder="Escribe tu calle" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Municipio" class="labelStyle1">Municipio</label><br>
-            <input type="text" id="municipio" class="inputStyle1" placeholder="Escribe tu municipio">
+            <input type="text" id="municipio" class="inputStyle1" placeholder="Escribe tu municipio" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Pais" class="labelStyle1">Pais</label><br>
-            <input type="text" id="pais" class="inputStyle1" placeholder="Escribe tu pais">
+            <input type="text" id="pais" class="inputStyle1" placeholder="Escribe tu país" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Estado" class="labelStyle1">Estado</label><br>
-            <input type="text" id="estado" class="inputStyle1" placeholder="Escribe tu estado">
+            <input type="text" id="estado" class="inputStyle1" placeholder="Escribe tu estado" onkeypress="return SoloLetras(event);" required>
             <br>
             <label for="Contraseña" class="labelStyle1">Contraseña</label><br>
             <input type="password" id="contraseña" class="inputStyle1" placeholder="Escribe tu contraseña">
             <br>
             <label for="Confirmar contraseña" class="labelStyle1">Confirmar contraseña</label><br>
             <input type="password" id="confirmar" class="inputStyle1" placeholder="Confirma tu contraseña">
+            <span id="mensajeContraseña"></span>
+
 
             <div class="botonDeEnviado">
                 <br>
@@ -85,6 +86,7 @@
                 <button class="instagram-button">Sigue en Instagram</button>
             </a>
         </div>
+        <script src="Pantalla1_CreacionUsuario.js"></script>
     </footer>
 </body>
 </html>

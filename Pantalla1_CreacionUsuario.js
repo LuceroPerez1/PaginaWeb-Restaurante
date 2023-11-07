@@ -1,70 +1,69 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form");
-  const nombreInput = document.getElementById("nombre");
-  const apellidoInput = document.getElementById("apellido");
-  const telefonoInput = document.getElementById("telefono");
-  const correoInput = document.getElementById("correo"); 
-  const contrasenaInput = document.getElementById("contraseña");
-  const confirmarContrasenaInput = document.getElementById("confirmar");
 
-  form.addEventListener("submit", function(event) {
-    const inputs = form.querySelectorAll("input");
-    let errorMessages = [];
-    let foundEmptyField = false;
+function SoloLetras(e){
+    
+  key = e.keyCode || e.which;
+  tecla = String.fromCharCode(key).toString();
+  letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚáéíóú";
 
-    for (let input of inputs) {
-      if (input.value.trim() === "") {
-        foundEmptyField = true;
-        break; 
+  especiales = [8,13,32];
+  tecla_especial = false
+      for(var i in especiales) {
+          if (key == especiales[i]) {
+              tecla_especial = true;
+              break;
+          }
       }
-    }
 
-    if (foundEmptyField) {
-      errorMessages.push("Tienes que llenar todos los campos.");
-    }
+  if(letras.indexOf(tecla) == -1 && !tecla_especial) {
+  alert("Ingresar solo letras");
+  return false;
+  }
 
-    // Validar el campo de nombre
-    const nombreValue = nombreInput.value;
-    const regexNombre = /^[a-zA-Z]+$/; 
+}
 
-    if (!regexNombre.test(nombreValue)) {
-      errorMessages.push("Escriba bien su nombre, por favor.");
-    }
+function SoloNumeros(evt){
 
-    // Validar el campo de apellido
-    const apellidoValue = apellidoInput.value;
+  if(window.Event){
+      keynum = evt.keyCode;
+  }
+  else{
+      keymun = evt.which;
+  }
 
-    if (!regexNombre.test(apellidoValue)) {
-      errorMessages.push("Escriba bien su apellido, por favor.");
-    }
+  if((keynum > 47 && keynum < 58) || keynum == 8 || keynum == 13){
+      return true;
+  }
+  else{
+      alert("Ingresar solo números");
+      return false;
+  }
+}
 
-    // Validar el campo de teléfono
-    const telefonoValue = telefonoInput.value;
-    const regexTelefono = /^[0-9]+$/; 
+function validarCorreo(correo) {
+  var regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  var mensajeCorreo = document.getElementById("mensajeCorreo");
 
-    if (!regexTelefono.test(telefonoValue) || telefonoValue.length !== 10) {
-      errorMessages.push("El campo de teléfono debe contener exactamente 10 dígitos numéricos.");
-    }
+  if (regex.test(correo)) {
+    mensajeCorreo.innerHTML = "Correo válido";
+    mensajeCorreo.style.color = "green";
+  } else {
+    mensajeCorreo.innerHTML = "Correo no válido";
+    mensajeCorreo.style.color = "red";
+  }
+}
 
-    // Validar el campo de correo
-    const correoValue = correoInput.value;
-    const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+function validarContraseñas() {
+  var contraseña = document.getElementById("contraseña").value;
+  var confirmar = document.getElementById("confirmar").value;
+  var mensajeContraseña = document.getElementById("mensajeContraseña");
 
-    if (!regexCorreo.test(correoValue)) {
-      errorMessages.push("Escriba bien su correo, por favor.");
-    }
-
-    // Validar las contraseñas
-    const contrasenaValue = contrasenaInput.value;
-    const confirmarContrasenaValue = confirmarContrasenaInput.value;
-
-    if (contrasenaValue !== confirmarContrasenaValue) {
-      errorMessages.push("Las contraseñas no coinciden.");
-    }
-
-    if (errorMessages.length > 0) {
-      event.preventDefault(); 
-      alert(errorMessages.join("\n")); 
-    }
-  });
-});
+  if (contraseña === confirmar) {
+    mensajeContraseña.innerHTML = "Las contraseñas coinciden";
+    mensajeContraseña.style.color = "green";
+  } else {
+    mensajeContraseña.innerHTML = "Las contraseñas no coinciden";
+    mensajeContraseña.style.color = "red";
+  }
+}
+document.getElementById("contraseña").addEventListener("input", validarContraseñas);
+document.getElementById("confirmar").addEventListener("input", validarContraseñas);
