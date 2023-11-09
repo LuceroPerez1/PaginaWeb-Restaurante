@@ -15,7 +15,7 @@ function SoloLetras(e){
       }
 
   if(letras.indexOf(tecla) == -1 && !tecla_especial) {
-  alert("Ingresar solo letras");
+  alert("Favor de ingresar solamente letras.");
   return false;
   }
 
@@ -34,7 +34,7 @@ function SoloNumeros(evt){
       return true;
   }
   else{
-      alert("Ingresar solo números");
+      alert("Favor de ingresar solamente números.");
       return false;
   }
 }
